@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+
+:root {
+  --bg-color: #fff;
+  --bg-color-alt: #f0f0f0;
+  --primary-color: #9397ff;
+  --text-color: #0e0e1a;
+  --text-color-alt: #131322;
+}
+
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: var(--bg-color);
+  transition: background 0.2s linear;
+}
+
+header{
+  margin: 2rem 4rem;
+}
+
+
+body.dark{
+  --bg-color:  #0e0e1a;
+  --bg-color-alt:#131322;
+  --primary-color: #9397ff;
+  --text-color: #fff;
+  --text-color-alt: #f0f0f0;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  width: 40px;
+  height: 21px;
+  background-color: #131322;
+  display: flex;
+  border-radius:50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  transform: scale(1.5);
+}
+
+.ball {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+/*  target the elemenent after the label*/
+.checkbox:checked + .label .ball{
+  transform: translateX(20px);
+}
+
+.fa-moon {
+  color: #ec10b5;
+}
+
+.fa-sun {
+  color: yellow;
+}
+
+.container{
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info{
+  width: 30%;
+  height: 100%;
+  margin: 20px;
+  padding: 20px;
+  background: var(--bg-color-alt);
+}
+
+.name h1{
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-size: 5rem;
+  font-weight: 550;
+  color: var(--text-color);
+}
+
+.name h3{
+  margin-top: 10px ;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.name h3 span{
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+  padding: 2px 10px;
+  margin-bottom: 5px;
+  border-radius: .2rem;
+}
+
+.name p{
+  margin-top: 15px ;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--text-color-alt);
+}
+
+.details{
+  margin-top: 20px;
+}
+
+.block{
+  margin-top: 10px;
+}
+
+.block h3{
+  color: var(--primary-color);
+  padding: 2px 10px;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.block h3 span{
+  color: var(--text-color-alt);
+  float: right;
+  font-size: 1.1rem;
+}
+
+.block p{
+  padding: 2px 10px;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-color-alt);
+}
+
+.block p span{
+  float: right;
+}
+
+.block p .bold{
+  color: var(--text-color);
+  font-size: 1.2rem;
+  float: left;
+}
+
+.block p a{
+  color: var(--text-color-alt);
+}
+
+.skills,
+.language,
+.interest{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.title{
+  border-bottom: .2rem solid var(--primary-color);
+}
+
+.title h3{
+  color: var(--text-color);
+  padding: 5px 0;
+  margin-bottom: 5px;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.tags{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tags h3{
+  margin-top: 10px ;
+  margin-right: 10px;
+  font-size: 1.5rem;
+  font-weight: 450;
+  color: var(--text-color);
+}
+
+.tags h3 span{
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+  padding: 2px 10px;
+  margin-bottom: 5px;
+  border-radius: .3rem;
+}
+
+.tags.border h3 span{
+  color: var(--text-color-alt);
+  background-color: transparent;
+  padding: 2px 10px;
+  margin-bottom: 5px;
+  border: .1rem solid var(--text-color);
+  border-radius: .3rem;
+}
+
+.edu{
+  width: 60%;
+  height: 100%;
+  margin: 20px;
+  padding: 10px;
+  margin-left: 5px;
+  padding-left: 0;
+  /* background: var(--text-color-alt); */
+}
+
+.box{
+  margin: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:490px){
+  .container{
+    /* margin: .5rem; */
+    margin: 0;
+    display: flex;
+  }
+  
+  .info{
+    width: 100%;
+    /* margin: 10px; */
+    margin: 0;
+  }
+
+  .edu{
+    width: 100%;
+    margin: 10px;
+  }
+
+}
